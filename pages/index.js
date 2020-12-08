@@ -1,14 +1,16 @@
+import { EOPNOTSUPP } from 'constants';
 import { useState } from 'react';
 
 function Home() {
-    return <div>
-        <h1>Home Page</h1>
+    return <div class="container">
+        <h2>Home Page</h2>
+        <p> Texto</p>
         <Contador />
     </div>
 }
 
 function Contador(){
-    const [contador,setContador] = useState(1);
+    const [contador,setContador] = useState(1); 
 
     function adicionarContador(){
         setContador(contador + 1);
@@ -16,9 +18,9 @@ function Contador(){
     return(
         <div>
             <div>{contador}</div>
-            <button onClick={adicionarContador}>Adicionar nun</button>
+            <button onClick={adicionarContador}>Adicionar</button>
         </div>
     )
 }
 
-export default Home 
+export default Home
